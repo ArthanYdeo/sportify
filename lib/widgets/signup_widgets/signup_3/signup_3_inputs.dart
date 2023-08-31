@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:sportify/constant/strings.dart';
-import 'package:sportify/pages/login.dart';
+import 'package:sportify/pages/signUp/signUp4.dart';
 import '../../../constant/colors.dart';
 import '../../../dialogs/dialog_unsuccessful.dart';
 import '../../signup_header.dart';
@@ -115,7 +115,7 @@ class _SignUpInputs3State extends State<SignUpInputs3> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const Login(),
+                          builder: (context) => const SignUp4(),
                         ));
                   });
                 },

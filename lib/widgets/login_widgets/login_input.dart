@@ -83,7 +83,7 @@ class _LogInInputsState extends State<LogInInputs> {
                       vertical: 10.0, horizontal: 15.0),
                 ),
                 style: const TextStyle(
-                  color: ColorPallete.accentWhite,
+                  color: ColorPallete.hintColor,
                   fontFamily: 'Lato',
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
@@ -142,7 +142,7 @@ class _LogInInputsState extends State<LogInInputs> {
                       vertical: 10.0, horizontal: 15.0),
                 ),
                 style: const TextStyle(
-                  color: ColorPallete.primary,
+                  color: ColorPallete.hintColor,
                   fontFamily: 'Lato',
                   fontSize: 18,
                   fontWeight: FontWeight.w700,

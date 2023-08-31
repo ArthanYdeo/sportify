@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:sportify/constant/colors.dart';
 import 'package:sportify/constant/strings.dart';
-
 import '../../../dialogs/dialog_unsuccessful.dart';
 import '../../../pages/signUp/signUp3.dart';
 import '../../age_tile.dart';
