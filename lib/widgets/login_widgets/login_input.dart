@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sportify/constant/colors.dart';
 
 import '../../dialogs/dialog_loading.dart';
-import '../../dialogs/dialog_unsuccessful.dart';
-import '../../home.dart';
+import '../../pages/home.dart';
 import '../../pages/signUp/signUp.dart';
 
 class LogInInputs extends StatefulWidget {
@@ -40,7 +39,7 @@ class _LogInInputsState extends State<LogInInputs> {
                 validator: (value) {
                   // Email RegEx Validation
                   final bool emailValid = RegExp(
-                      r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                          r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
                       .hasMatch(value!);
                   if (value.isNotEmpty && emailValid) {
                     return null;
@@ -83,7 +82,7 @@ class _LogInInputsState extends State<LogInInputs> {
                       vertical: 10.0, horizontal: 15.0),
                 ),
                 style: const TextStyle(
-                  color: ColorPallete.hintColor,
+                  color: Color.fromARGB(255, 11, 10, 4),
                   fontFamily: 'Lato',
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
@@ -142,7 +141,7 @@ class _LogInInputsState extends State<LogInInputs> {
                       vertical: 10.0, horizontal: 15.0),
                 ),
                 style: const TextStyle(
-                  color: ColorPallete.hintColor,
+                  color: ColorPallete.primary,
                   fontFamily: 'Lato',
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
@@ -158,16 +157,15 @@ class _LogInInputsState extends State<LogInInputs> {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
-                  if (!_formKey.currentState!.validate()) {
-                  return;
-                  }
-                  DialogLoading(subtext: "Logging in.")
-                      .buildLoadingScreen(context);
-                  Navigator.of(context).pushAndRemoveUntil(
-                      MaterialPageRoute(
-                          builder: (context) => const Home()),
-                          (Route<dynamic> route) => false);
-                },
+                    if (!_formKey.currentState!.validate()) {
+                      return;
+                    }
+                    DialogLoading(subtext: "Logging in.")
+                        .buildLoadingScreen(context);
+                    Navigator.of(context).pushAndRemoveUntil(
+                        MaterialPageRoute(builder: (context) => Home()),
+                        (Route<dynamic> route) => false);
+                  },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all<Color>(
                       ColorPallete.accentBlack,
@@ -213,8 +211,7 @@ class _LogInInputsState extends State<LogInInputs> {
                   },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all<Color>(
-                      ColorPallete.accentBlack
-                    ),
+                        ColorPallete.accentBlack),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50),
@@ -238,10 +235,10 @@ class _LogInInputsState extends State<LogInInputs> {
       ),
     );
   }
+
   void _togglePasswordVisibility() {
     setState(() {
       _showPassword = !_showPassword;
     });
   }
 }
-
