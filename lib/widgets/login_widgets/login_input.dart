@@ -83,7 +83,7 @@ class _LogInInputsState extends State<LogInInputs> {
                       vertical: 10.0, horizontal: 15.0),
                 ),
                 style: const TextStyle(
-                  color: ColorPallete.hintColor,
+                  color: ColorPallete.secondary,
                   fontFamily: 'Lato',
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
@@ -122,7 +122,7 @@ class _LogInInputsState extends State<LogInInputs> {
                   errorStyle: const TextStyle(
                     color: ColorPallete.accentWhite,
                   ),
-                  suffixIconColor: ColorPallete.accentWhite,
+                  suffixIconColor: ColorPallete.hintColor,
                   suffixIcon: GestureDetector(
                     onTap: _togglePasswordVisibility,
                     child: _showPassword
@@ -142,7 +142,7 @@ class _LogInInputsState extends State<LogInInputs> {
                       vertical: 10.0, horizontal: 15.0),
                 ),
                 style: const TextStyle(
-                  color: ColorPallete.hintColor,
+                  color: ColorPallete.secondary,
                   fontFamily: 'Lato',
                   fontSize: 18,
                   fontWeight: FontWeight.w700,

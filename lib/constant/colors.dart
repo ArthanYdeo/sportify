@@ -11,7 +11,7 @@ class ColorPallete{
   static const Color accentWhite = Color(0xffFFFEF7);
   static const Color accentBlack = Color(0xff262626);
   static const Color lightGreen = Color(0xff33A031);
-
+  static const Color accentDarkRed = Color(0xff76001F);
 
 
 

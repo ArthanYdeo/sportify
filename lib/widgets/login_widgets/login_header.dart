@@ -8,8 +8,8 @@ class LogInHeader extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 220,
-          height: 220,
+          width: 320,
+          height: 320,
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/images/sportify.PNG'),
